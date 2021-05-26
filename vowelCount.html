@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Count</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function vowels(str1)
+        {
+            var vowel_list = 'aeiouAEIOU';
+            var vcount = 0, a_count = 0, e_count = 0, i_count = 0, o_count = 0, u_count = 0;
+            
+            for(var x = 0; x < str1.length ; x++)
+            {
+                if (vowel_list.indexOf(str1[x]) !== -1)
+                {
+                    vcount += 1;
+                    if(str1[x] == 'a' || str1[x] == 'A')
+                    {
+                        a_count += 1;
+                    }
+                    if(str1[x] == 'e' || str1[x] == 'E')
+                    {
+                        e_count += 1;
+                    }
+                    if(str1[x] == 'i' || str1[x] == 'I')
+                    {
+                        i_count += 1;
+                    }
+                    if(str1[x] == 'o' || str1[x] == 'O')
+                    {
+                        o_count += 1;
+                    }
+                    if(str1[x] == 'u' || str1[x] == 'U')
+                    {
+                        u_count += 1;
+                    }
+                }
+            
+            }
+            console.log("A: " + a_count);
+            console.log("E: " + e_count);
+            console.log("I: " + i_count);
+            console.log("O: " + o_count);
+            console.log("U: " + u_count);
+            return vcount;
+            
+        }
+        var string = prompt("Enter a String");
+        console.log(vowels(string));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS function as parameter</title>
+    <style>
+        .content{
+            border: 1px solid #eee;
+            box-shadow: 0 2px 2px #ccc;
+            padding: 20px;
+            margin: 20px;
+            width: 400px;
+        }
+        #result{
+            color: red;
+            padding: 10px;
+        }
+        button{
+            margin-top: 10px;
+            font-size: 16px;
+            width: 100px;
+            height: 30px;
+        }
+        input
+        {
+            margin-bottom: 15px;
+            font-size: 16px;
+            padding: 5px;
+        }
+        textarea
+        {
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h4>Please Enter your Name and Message</h4>
+        <input type="text" id="name" placeholder="Your Name">
+        <textarea id="message" rows="8" cols="50" style="resize: none;" placeholder="Your Message"></textarea>
+        <button type="submit" onclick="output(message)">Submit</button>
+        <p id = "result"></p>
+    </div>
+    <script src="jsfunc.js"></script>
+</body>
+</html>

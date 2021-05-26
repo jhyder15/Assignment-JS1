@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Array</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function uniqueArr(arr1,arr2)
+        {
+            var a = arr1;
+            var b = arr2;
+            var c = a.filter(function(obj) { return b.indexOf(obj) == -1; });
+            var d = b.filter(function(obj) { return a.indexOf(obj) == -1; });
+            var unique = c.concat(d);
+            document.write(unique + "<br>");
+        }
+        
+        //Removing Duplicates
+        function uniqueArr_2(arr1, arr2)
+        {
+                var arr = arr1.concat(arr2);
+                var unique1 = [];
+                for(let i of arr)
+                {
+                    if(unique1.indexOf(i) === -1) 
+                    {
+                        unique1.push(i);
+                    }
+                }
+                document.write(unique1);
+        }
+
+        var array1 = [1, 2, 3];
+        var array2 = [100, 2, 1, 10];
+        uniqueArr(array1,array2);
+        uniqueArr_2(array1, array2);
+    </script>
+</body>
+</html>
